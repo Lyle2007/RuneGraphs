@@ -37,7 +37,13 @@ class highscoresController extends Controller
         $striped_response = preg_split( "/(\n|,)/", $body, 93 );
         // Assign key values to the response
         $keyed_response = array_combine_($keys, $striped_response);
-        dd($keyed_response);
+
+        foreach ($keyed_response as $k => $k_value){
+            echo $k . " = " . $k_value;
+            echo "<br>";
+        }
+
+//        dd($keyed_response);
     }
 }
 
