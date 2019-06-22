@@ -24,7 +24,7 @@
                     {{ csrf_field() }}
                     <div class="form-group">
                         <label for="character_nm">Character</label>
-                        <input type="text" class="form-control" name="player" id="player" >
+                        <input type="text" class="form-control" name="user_input" id="player" >
                     </div>
                     <button class="btn btn-primary" type="submit">Search</button>
                 </form>
