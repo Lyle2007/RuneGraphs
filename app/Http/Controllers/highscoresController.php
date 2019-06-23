@@ -37,13 +37,36 @@ class highscoresController extends Controller
         $striped_response = preg_split( "/(\n|,)/", $body, 93 );
         // Assign key values to the response
         $keyed_response = array_combine_($keys, $striped_response);
-
-        foreach ($keyed_response as $k => $k_value){
-            echo $k . " = " . $k_value;
-            echo "<br>";
-        }
-
-//        dd($keyed_response);
+        // This function uses array keys as variable names and values as variable values.
+        extract($keyed_response);
+        $highscores = new highscores;
+        $highscores->Character_Name = $user_input;
+        $highscores->Overall_XP = $Overall_XP;
+        $highscores->Attack_XP = $Attack_XP;
+        $highscores->Defence_XP = $Defence_XP;
+        $highscores->Strength_XP = $Strength_XP;
+        $highscores->Hitpoints_XP = $Hitpoints_XP;
+        $highscores->Ranged_XP = $Ranged_XP;
+        $highscores->Prayer_XP = $Prayer_XP;
+        $highscores->Magic_XP = $Magic_XP;
+        $highscores->Cooking_XP = $Cooking_XP;
+        $highscores->Woodcutting_XP = $Woodcutting_XP;
+        $highscores->Fletching_XP = $Fletching_XP;
+        $highscores->Fishing_XP = $Fishing_XP;
+        $highscores->Firemaking_XP = $Firemaking_XP;
+        $highscores->Crafting_XP = $Crafting_XP;
+        $highscores->Smithing_XP = $Smithing_XP;
+        $highscores->Mining_XP = $Mining_XP;
+        $highscores->Herblore_XP = $Herblore_XP;
+        $highscores->Agility_XP = $Agility_XP;
+        $highscores->Thieving_XP = $Thieving_XP;
+        $highscores->Slayer_XP = $Slayer_XP;
+        $highscores->Farming_XP = $Farming_XP;
+        $highscores->Runecrafting_XP = $Runecrafting_XP;
+        $highscores->Hunter_XP = $Hunter_XP;
+        $highscores->Construction_XP = $Construction_XP;
+        $highscores->saveOrFail();
+        echo "Saved to Database!";
     }
 }
 
