@@ -11,8 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'highscoresController@index');
 
 Route::resource('highscores', 'highscoresController');

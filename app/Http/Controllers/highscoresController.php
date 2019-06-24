@@ -9,7 +9,16 @@ use GuzzleHttp\Client;
 
 class highscoresController extends Controller
 {
-    public function index(Request $request)
+    public function index()
+    {
+        $highscores = highscores::latest()->paginate(5);
+
+        return view('welcome', compact('highscores'));
+    }
+
+
+
+    public function store(Request $request)
     {
         function array_combine_($keys, $values)
         {
@@ -66,7 +75,14 @@ class highscoresController extends Controller
         $highscores->Hunter_XP = $Hunter_XP;
         $highscores->Construction_XP = $Construction_XP;
         $highscores->saveOrFail();
-        echo "Saved to Database!";
+        return redirect('/');
+        //TODO: Make this whole damn thing a function
+
+        //TODO: Figure out the formula to generate skill levels.
     }
+
+
+
+
 }
 
