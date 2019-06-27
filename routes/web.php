@@ -10,9 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', 'highscoresController@index')->name('home');
-Route::get('level/{xp}', 'levelController@show');
+Route::post('/highscores', 'highscoresController@store');
 Route::resource('highscores', 'highscoresController');
+
 
 

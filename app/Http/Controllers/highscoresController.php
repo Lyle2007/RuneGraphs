@@ -11,7 +11,7 @@ class highscoresController extends Controller
 {
     public function index()
     {
-        $highscores = highscores::latest()->take(5)->get();
+        $highscores = highscores::latest()->paginate(5);
 
         return view('welcome', compact('highscores'));
     }
@@ -79,11 +79,9 @@ class highscoresController extends Controller
         $highscores->Hunter_XP = $Hunter_XP;
         $highscores->Construction_XP = $Construction_XP;
         $highscores->saveOrFail();
-        return route('home');
-        //TODO: Make this whole damn thing a function
-
-        //TODO: Figure out the formula to generate skill levels.
+        return redirect('/');
     }
+
 }
 
 
