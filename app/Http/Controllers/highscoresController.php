@@ -11,12 +11,15 @@ class highscoresController extends Controller
 {
     public function index()
     {
-        $highscores = highscores::latest()->paginate(5);
+        $highscores = highscores::latest()->take(5)->get();
 
         return view('welcome', compact('highscores'));
     }
 
-
+    public function level(Request $xp)
+    {
+        //
+    }
 
     public function store(Request $request)
     {
@@ -31,7 +34,8 @@ class highscoresController extends Controller
             });
             return $result;
         }
-        $keys = array('Overall_Rank','Overall_Level','Overall_XP','Attack_Rank','Attack_Level','Attack_XP','Defence_Rank','Defence_Level','Defence_XP','Strength_Rank','Strength_Level','Strength_XP','Hitpoints_Rank','Hitpoints_Level','Hitpoints_XP','Ranged_Rank','Ranged_Level','Ranged_XP','Prayer_Rank','Prayer_Level','Prayer_XP','Magic_Rank','Magic_Level','Magic_XP','Cooking_Rank','Cooking_Level','Cooking_XP','Woodcutting_Rank','Woodcutting_Level','Woodcutting_XP','Fletching_Rank','Fletching_Level','Fletching_XP','Fishing_Rank','Fishing_Level','Fishing_XP','Firemaking_Rank','Firemaking_Level','Firemaking_XP','Crafting_Rank','Crafting_Level','Crafting_XP','Smithing_Rank','Smithing_Level','Smithing_XP','Mining_Rank','Mining_Level','Mining_XP','Herblore_Rank','Herblore_Level','Herblore_XP','Agility_Rank','Agility_Level','Agility_XP','Thieving_Rank','Thieving_Level','Thieving_XP','Slayer_Rank','Slayer_Level','Slayer_XP','Farming_Rank','Farming_Level','Farming_XP','Runecrafting_Rank','Runecrafting_Level','Runecrafting_XP','Hunter_Rank','Hunter_Level','Hunter_XP','Construction_Rank','Construction_Level','Construction_XP');
+
+        $keys = array('Overall_Rank', 'Overall_Level', 'Overall_XP', 'Attack_Rank', 'Attack_Level', 'Attack_XP', 'Defence_Rank', 'Defence_Level', 'Defence_XP', 'Strength_Rank', 'Strength_Level', 'Strength_XP', 'Hitpoints_Rank', 'Hitpoints_Level', 'Hitpoints_XP', 'Ranged_Rank', 'Ranged_Level', 'Ranged_XP', 'Prayer_Rank', 'Prayer_Level', 'Prayer_XP', 'Magic_Rank', 'Magic_Level', 'Magic_XP', 'Cooking_Rank', 'Cooking_Level', 'Cooking_XP', 'Woodcutting_Rank', 'Woodcutting_Level', 'Woodcutting_XP', 'Fletching_Rank', 'Fletching_Level', 'Fletching_XP', 'Fishing_Rank', 'Fishing_Level', 'Fishing_XP', 'Firemaking_Rank', 'Firemaking_Level', 'Firemaking_XP', 'Crafting_Rank', 'Crafting_Level', 'Crafting_XP', 'Smithing_Rank', 'Smithing_Level', 'Smithing_XP', 'Mining_Rank', 'Mining_Level', 'Mining_XP', 'Herblore_Rank', 'Herblore_Level', 'Herblore_XP', 'Agility_Rank', 'Agility_Level', 'Agility_XP', 'Thieving_Rank', 'Thieving_Level', 'Thieving_XP', 'Slayer_Rank', 'Slayer_Level', 'Slayer_XP', 'Farming_Rank', 'Farming_Level', 'Farming_XP', 'Runecrafting_Rank', 'Runecrafting_Level', 'Runecrafting_XP', 'Hunter_Rank', 'Hunter_Level', 'Hunter_XP', 'Construction_Rank', 'Construction_Level', 'Construction_XP');
         // The input supplied by the user form
         $user_input = request('user_input');
         // Add required text before user input using concatenation.
@@ -43,7 +47,7 @@ class highscoresController extends Controller
         // Get the body of the request containing the users information
         $body = $response->getBody();
         // Use delimiters to sort the response
-        $striped_response = preg_split( "/(\n|,)/", $body, 93 );
+        $striped_response = preg_split("/(\n|,)/", $body, 93);
         // Assign key values to the response
         $keyed_response = array_combine_($keys, $striped_response);
         // This function uses array keys as variable names and values as variable values.
@@ -75,14 +79,11 @@ class highscoresController extends Controller
         $highscores->Hunter_XP = $Hunter_XP;
         $highscores->Construction_XP = $Construction_XP;
         $highscores->saveOrFail();
-        return redirect('/');
+        return route('home');
         //TODO: Make this whole damn thing a function
 
         //TODO: Figure out the formula to generate skill levels.
     }
-
-
-
-
 }
+
 

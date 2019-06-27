@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', 'highscoresController@index');
-
+Route::get('/', 'highscoresController@index')->name('home');
+Route::get('level/{xp}', 'levelController@show');
 Route::resource('highscores', 'highscoresController');
+
+
