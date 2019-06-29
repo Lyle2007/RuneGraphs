@@ -19,13 +19,25 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body>
-    <div id="app">
-
-
-        <main class="py-4">
-            @yield('content')
-        </main>
+<style>
+    html,body{
+        height: 100%;
+        width:100%
+    }
+    .overlay_login {
+    background: rgba(244,244,244,0.30);
+    height: 100%;
+    width:100%;
+    }
+    </style>
+<body style="background-image:url('img/GE.png')">
+    <div class="overlay_login h-100 w-100">
+            <div id="app">
+                    <main class="py-4">
+                        @yield('content')
+                    </main>
+                </div>
     </div>
+
 </body>
 </html>

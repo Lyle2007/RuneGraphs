@@ -9,10 +9,29 @@
     {{-- Styles --}}
     <link rel="stylesheet" href="/css/app.css">
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Montserrat:400,700">
 </head>
+
+<style>
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.container-fluid {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    margin: 0;
+}
+</style>
 <body>
 @component('components.navbar') @endcomponent
+
+
 <div class="container-fluid">
+        @component('components.header') @endcomponent
     @yield('content')
 </div>
 
