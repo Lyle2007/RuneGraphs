@@ -8,6 +8,7 @@
 
     {{-- Styles --}}
     <link rel="stylesheet" href="/css/app.css">
+    <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 <body>
 @component('components.navbar') @endcomponent

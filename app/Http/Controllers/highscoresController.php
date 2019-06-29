@@ -11,9 +11,17 @@ class highscoresController extends Controller
 {
     public function index()
     {
+        // Fetch the last 5 data points
         $highscores = highscores::latest()->paginate(5);
+        // Calculate the amount of rows in the table
+        $tableList = highscores::where('id', '>', 0)->get();
+        $wordcount = count($tableList);
+        // Fetch the 5 most common 99's
+        $distinctNames = highscores::select('Character_Name')->distinct()->latest()->paginate(3);
+        // Fetch the 5 least most common 99's
 
-        return view('welcome', compact('highscores'));
+
+        return view('welcome', compact('highscores', 'wordcount', 'distinctNames'));
     }
 
     public function level(Request $xp)

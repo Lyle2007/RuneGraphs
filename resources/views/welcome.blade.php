@@ -27,6 +27,9 @@
     <link href="https://fonts.googleapis.com/css?family=VT323&display=swap" rel="stylesheet">
 
     <style>
+        body{
+            background-color: #232e3a;
+        }
         .skill-table {
             padding: 0.25rem;
         }
@@ -40,17 +43,17 @@
         .card-img-overlay {
             max-height: 75px;
             min-width: 250px;
-            background-color: #8b7860;
         }
 
         .card {
             min-width: 250px;
+            margin:10px;
+            border:1px solid rgba(0, 0, 0, 0.125) !important;
+            border-radius: .25rem !important;
         }
 
         .osrs-text {
             font-family: 'VT323', monospace;
-            color: palegoldenrod;
-            text-shadow: 2px 1px #1d2124;
         }
 
         .pagination {
@@ -63,50 +66,70 @@
 
 <div class="content-wrapper">
     <div class="row">
-        <div class="card-deck ml-auto mr-auto col-12">
-            <div class="card">
-                <img src="img/card_images/scroll.png" class="card-img-top" alt="...">
-                <div class="card-img-overlay">
-                    <h2 class="text-center align-middle m-0 osrs-text">TRACK CHARACTER</h2>
-                </div>
+        <div class="col-12 card-group">
+            <div class="card col-2">
                 <div class="card-body">
+                    <h5 class="card-title">New Data Point</h5>
                     <form action="/highscores" method="POST">
                         {{ csrf_field() }}
                         <div class="form-group">
                             <label for="player">Character</label>
                             <input type="text" class="form-control" name="user_input" id="player"
-                                   placeholder="Character Name...">
+                                   placeholder="" required>
                         </div>
                         <button class="btn btn-primary" type="submit">Search</button>
                     </form>
                 </div>
             </div>
-            <div class="card">
-                <img src="img/card_images/scroll.png" class="card-img-top" alt="...">
-                <div class="card-img-overlay">
-                    <h2 class="text-center align-middle m-0 osrs-text">LATEST INFO</h2>
-                </div>
+            <div class="card col-3">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.</p>
-                    <p class="card-text">
-                        <small class="text-muted">Last updated 3 mins ago</small>
-                    </p>
+                    <h5 class="card-title">Skill Statistics</h5>
+                    <div>
+                        <table class="table-sm">
+                            <thead>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Average Total Level:</td>
+                            </tr>
+                            <tr>
+                                <td>Most Common 99's:</td>
+                            </tr>
+                            <tr>
+                                <td>Least Common 99's:</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="card col-3">
+                <div class="card-body">
+                    <h5 class="card-title">Database Statistics</h5>
+                    <div>
+                        <table class="table-sm">
+                            <thead>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Total Data Entries: {{ $wordcount }}</td>
+                            </tr>
+                            <tr>
+                                <td>Character with most Data Points:</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
             <div class="card">
-                <img src="img/card_images/scroll.png" class="card-img-top" alt="...">
-                <div class="card-img-overlay">
-                    <h2 class="text-center align-middle m-0 osrs-text">POPULAR LINKS</h2>
-                </div>
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional
-                        content.</p>
-                    <p class="card-text">
-                        <small class="text-muted">Last updated 3 mins ago</small>
-                    </p>
+                    <h5 class="card-title">Q&A</h5>
+                    <ul class="list-group list-group-flush">
+                            @foreach ($distinctNames as $distinctName)
+                                <li class="list-group-item"> {{ $distinctName->Character_Name }}</li>
+                            @endforeach
+                    </ul>
                 </div>
             </div>
         </div>
@@ -114,7 +137,7 @@
     <div class="row pt-2">
         <div class="col-12">
             <div class="card">
-                <table class="table">
+                <table class="table table-striped">
                     <thead>
                         <th></th>
                         <th><img src="img/skills/overall.gif" alt="Overall"></th>
