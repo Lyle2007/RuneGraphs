@@ -11,6 +11,7 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Montserrat:400,700">
 </head>
+<script src="https://kit.fontawesome.com/96523c0c92.js"></script>
 
 <style>
 html, body {
@@ -29,9 +30,8 @@ html, body {
 <body>
 @component('components.navbar') @endcomponent
 
-
 <div class="container-fluid">
-        @component('components.header') @endcomponent
+    @component('components.frontPage') @endcomponent
     @yield('content')
 </div>
 

@@ -1,6 +1,8 @@
 @extends('layouts.master')
 
-@section('content')
+
+
+
     {{-- Function that turns XP into Levels --}}
     <?php
     function getLevel($xp)
@@ -23,29 +25,3 @@
         return $x;
     }
     ?>
-
-    <link href="https://fonts.googleapis.com/css?family=VT323&display=swap" rel="stylesheet">
-
-    <style>
-        .card-img-top {
-            max-height: 75px;
-            min-width: 250px;
-        }
-
-        .card-img-overlay {
-            max-height: 75px;
-            min-width: 250px;
-        }
-        .card {
-            min-width: 250px;
-            margin:10px;
-            border:1px solid rgba(0, 0, 0, 0.125) !important;
-            border-radius: .25rem !important;
-        }
-
-        .osrs-text {
-            font-family: 'VT323', monospace;
-        }
-    </style>
-
-@section('title', 'Dashboard') @endsection
