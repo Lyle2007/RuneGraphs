@@ -24,9 +24,11 @@ class highscoresController extends Controller
         return view('welcome', compact('highscores', 'wordcount', 'distinctNames'));
     }
 
-    public function level(Request $xp)
+    public function show(Request $request)
     {
-        //
+        $user = request('Character_Name');
+        $char = highscores::where('Character_Name', $user)->get();
+        return view('character.dashboard', compact('char'));
     }
 
     public function store(Request $request)
@@ -87,7 +89,7 @@ class highscoresController extends Controller
         $highscores->Hunter_XP = $Hunter_XP;
         $highscores->Construction_XP = $Construction_XP;
         $highscores->saveOrFail();
-        return redirect('/');
+        return redirect('highscores.show');
     }
 
 }
