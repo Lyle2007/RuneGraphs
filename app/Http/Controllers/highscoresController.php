@@ -27,8 +27,16 @@ class highscoresController extends Controller
     public function show(Request $request)
     {
         $user = request('Character_Name');
-        $char = highscores::where('Character_Name', $user)->get();
-        return view('character.dashboard', compact('char'));
+
+        if(highscores::where('Character_Name', $user)->exists()){
+            $char = highscores::where('Character_Name', $user)->get();
+            return view('character.dashboard', compact('char'));
+        }
+        else {
+            return "No Character Found!";
+        }
+
+
     }
 
     public function store(Request $request)
