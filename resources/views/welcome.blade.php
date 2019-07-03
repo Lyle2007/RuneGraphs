@@ -17,6 +17,11 @@
                                     </div>
                                 </div>
                         </form>
+                        @if (session('status'))
+                            <div class="alert alert-danger" style="max-width:375px;">
+                                {{ session('status') }}
+                            </div>
+                        @endif
                     <div>
                         <a href="https://github.com/Lyle2007/RuneGraphs"><i class="fab fa-github fa-2x" style="color:white;" onmouseover="btnMouse(this)" onmouseout="normalBtn(this)" ></i></a>
                         <a href="https://twitter.com/GraphsRune"><i class="fab fa-twitter fa-2x pl-3" style="color:white;" onmouseover="btnMouse(this)" onmouseout="normalBtn(this)" ></i></a>
