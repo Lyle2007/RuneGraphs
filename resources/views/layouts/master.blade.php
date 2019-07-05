@@ -30,7 +30,7 @@
             html, body {
             max-width: 100%;
             overflow-x: hidden;
-            overflow-y: hidden;
+
             }
 
             .container-fluid {
