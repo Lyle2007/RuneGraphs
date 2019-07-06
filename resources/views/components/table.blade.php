@@ -1,5 +1,10 @@
 <table class="table table-bordered">
     <thead>
+    <style>
+        th, td {
+            text-align: center;
+        }
+    </style>
     <th></th>
     <th><img src="/img/skills/overall.gif" alt="Overall"></th>
     <th><img src="/img/skills/attack.gif" alt="Attack"></th>

@@ -30,7 +30,7 @@ class highscoresController extends Controller
         //Check to see if character exists, if they do return all their data points. If not refresh with alert.
         if(highscores::where('Character_Name', $user)->exists()){
             $chars = highscores::where('Character_Name', $user)->latest()->get();
-            $charsLast5 = highscores::where('Character_Name', $user)->latest()->paginate(5);
+            $charsLast5 = highscores::where('Character_Name', $user)->latest()->paginate(25);
             $charsCount = count($chars);
             return view('character.dashboard', compact('chars', 'charsCount', 'charsLast5'));
         }
