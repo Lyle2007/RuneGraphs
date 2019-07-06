@@ -41,6 +41,7 @@
             }
         </style>
 
+
     {{-- BODY --}}
         <body>
             @component('components.navbar') @endcomponent
@@ -59,5 +60,7 @@
         x.style.color = "white";
         }
     </script>
+
+
 
 
