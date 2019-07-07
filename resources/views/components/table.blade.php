@@ -1,4 +1,15 @@
-<table class="table table-bordered">
+<style>
+    .skill-table {
+        padding: 0.25rem;
+    }
+
+    .pagination {
+        align-self: flex-end;
+        padding-right: 1rem;
+    }
+</style>
+
+<table class="table table-bordered mb-0">
     <thead>
     <style>
         th, td {
@@ -65,3 +76,4 @@
     @endforeach
     </tbody>
 </table>
+
