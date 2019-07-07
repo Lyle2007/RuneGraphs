@@ -8,14 +8,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f5a312db-1b22-432a-8039-cbb827212e96" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Lylem.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Lylem.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c738a7f3-428a-4d9d-9de3-b4db4237934a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c738a7f3-428a-4d9d-9de3-b4db4237934a.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/highscoresController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/highscoresController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/character/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/character/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/table.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,10 +82,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/components/table.blade.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/character/dashboard.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="796">
-              <caret line="77" column="8" selection-start-line="77" selection-start-column="8" selection-end-line="77" selection-end-column="8" />
+            <state relative-caret-position="736">
+              <caret line="236" column="125" lean-forward="true" selection-start-line="236" selection-start-column="125" selection-end-line="236" selection-end-column="125" />
             </state>
           </provider>
         </entry>
@@ -141,14 +136,14 @@
         <option value="$PROJECT_DIR$/resources/views/components/navbar.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/app/models/highscores.php" />
-        <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/components/mostRecentStats.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/components/php/getLevel.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/highscoresController.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/master.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/character/dashboard.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/components/table.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/highscoresController.php" />
+        <option value="$PROJECT_DIR$/resources/views/character/dashboard.blade.php" />
       </list>
     </option>
   </component>
@@ -498,7 +493,7 @@
       <workItem from="1562351178717" duration="8198000" />
       <workItem from="1562360461874" duration="207000" />
       <workItem from="1562380040633" duration="9253000" />
-      <workItem from="1562451032604" duration="8713000" />
+      <workItem from="1562451032604" duration="13353000" />
     </task>
     <task id="LOCAL-00001" summary="Reformat and Title">
       <created>1561655339834</created>
@@ -528,11 +523,25 @@
       <option name="project" value="LOCAL" />
       <updated>1562389028677</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="chart.js">
+      <created>1562459973658</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1562459973658</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Almost there">
+      <created>1562463030959</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1562463030959</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112308000" />
+    <option name="totallyTimeSpent" value="116948000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -547,9 +556,9 @@
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.737003" visible="true" weight="0.16755603" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.73598367" visible="true" weight="0.16755603" />
       <window_info id="Structure" order="1" sideWeight="0.24159022" side_tool="true" weight="0.13447171" />
-      <window_info id="Favorites" order="2" sideWeight="0.26299694" side_tool="true" visible="true" weight="0.16755603" />
+      <window_info id="Favorites" order="2" sideWeight="0.2640163" side_tool="true" visible="true" weight="0.16755603" />
       <window_info id="TODO" order="3" sideWeight="0.23995881" side_tool="true" weight="0.178762" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32763818" />
@@ -617,7 +626,9 @@
     <MESSAGE value="Reformat and Title" />
     <MESSAGE value="Added to gitignore" />
     <MESSAGE value="Dashboard Additions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dashboard Additions" />
+    <MESSAGE value="chart.js" />
+    <MESSAGE value="Almost there" />
+    <option name="LAST_COMMIT_MESSAGE" value="Almost there" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
@@ -807,13 +818,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/highscores.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -824,34 +828,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://c738a7f3-428a-4d9d-9de3-b4db4237934a/schema/runegraphs/table/highscores">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="90adec50-5f4e-4d49-b5aa-5d97b8547fdc">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="18" column="31" lean-forward="true" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/components/php/getLevel.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/highscoresController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-299">
-          <caret line="32" column="89" selection-start-line="32" selection-start-column="89" selection-end-line="32" selection-end-column="89" />
-          <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webpack.mix.js">
       <provider selected="true" editor-type-id="text-editor" />
@@ -900,20 +878,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/character/dashboard.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/components/table.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="106" column="111" selection-start-line="106" selection-start-column="111" selection-end-line="106" selection-end-column="111" />
+        <state relative-caret-position="1348">
+          <caret line="77" column="8" selection-start-line="77" selection-start-column="8" selection-end-line="77" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://c738a7f3-428a-4d9d-9de3-b4db4237934a/schema/runegraphs/table/highscores">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="366158dd-f8d6-4371-9f0c-893826b0e051">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/highscores.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/highscoresController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="108" column="40" lean-forward="true" selection-start-line="108" selection-start-column="40" selection-end-line="108" selection-end-column="40" />
           <folding>
-            <element signature="e#2379#2401#0#HTML" expanded="true" />
+            <element signature="e#40#68#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/components/table.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="796">
-          <caret line="77" column="8" selection-start-line="77" selection-start-column="8" selection-end-line="77" selection-end-column="8" />
+        <state relative-caret-position="230">
+          <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/character/dashboard.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="736">
+          <caret line="236" column="125" lean-forward="true" selection-start-line="236" selection-start-column="125" selection-end-line="236" selection-end-column="125" />
         </state>
       </provider>
     </entry>
