@@ -11,8 +11,6 @@
 |
 */
 Route::get('/', 'highscoresController@index')->name('home');
-Route::post('/highscores', 'highscoresController@store')->name('storeDataPoint');
-Route::get('/highscores', 'highscoresController@show')->name('showDataPoint');
-Route::resource('/highscores', 'highscoresController');
+Route::resource('highscores', 'highscoresController');
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
