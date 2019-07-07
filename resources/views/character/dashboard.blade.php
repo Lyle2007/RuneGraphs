@@ -40,11 +40,6 @@
                                 </div>
                             </form>
                         </div>
-                        @if (session('status'))
-                            <div class="alert alert-danger">
-                                {{ session('status') }}
-                            </div>
-                        @endif
             </div>
         </div>
                 <div class="row col-12 m-0 p-0 pt-1">

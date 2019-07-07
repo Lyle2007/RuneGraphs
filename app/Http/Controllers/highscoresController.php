@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\highscores;
 use phpDocumentor\Reflection\Types\Mixed_;
 use GuzzleHttp\Client;
+use vendor\project\StatusTest;
 
 class highscoresController extends Controller
 {
@@ -35,7 +36,7 @@ class highscoresController extends Controller
             return view('character.dashboard', compact('chars', 'charsCount', 'charsLast5'));
         }
         else {
-            return back()->with('status', 'Character not Found!');
+            return redirect()->route('highscores.store', ['Character_Name' => $user]);
         }
 
 
@@ -100,7 +101,16 @@ class highscoresController extends Controller
         $highscores->Construction_XP = $Construction_XP;
         $highscores->saveOrFail();
 
-        return back();
+        $user = $user_input;
+        //Check to see if character exists, if they do return all their data points. If not refresh with alert.
+        if (highscores::where('Character_Name', $user)->exists()) {
+            $chars = highscores::where('Character_Name', $user)->latest()->get();
+            $charsLast5 = highscores::where('Character_Name', $user)->latest()->paginate(5);
+            $charsCount = count($chars);
+            return view('character.dashboard', compact('chars', 'charsCount', 'charsLast5'));
+        } else {
+            return redirect()->home();
+        }
     }
 
 }

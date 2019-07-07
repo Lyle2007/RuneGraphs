@@ -8,10 +8,11 @@
                         <h1 class="text-muted" id='front-page-title'>RuneGraphs</h1>
                         <div class="h3 text-muted" id='front-page-subtitle'>Its not healthy to be this informed.</div>
                         {{-- Takes user info and then checks DB for existing data --}}
-                        <form action="/highscores/{Character_Name}" method="get">
+                        <form action="highscores" method="post">
                             {{ csrf_field() }}
                             <div class="input-group" style="max-width:375px;">
-                            <input type="text" class="form-control" name="Character_Name" id="Character_Name" placeholder="Character Name" value="{{ old('Character_Name') }}" required>
+                                <input type="text" class="form-control" name="Character_Name" id="Character_Name"
+                                       placeholder="Character Name" required>
                                     <div class="input-group-append">
                                         <button class="btn btn-outline-light" type="submit">Search</button>
                                     </div>
